@@ -8,9 +8,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LoaderStatTest {
 
-    private final String FILE_CSV = "src/test/resources/out.csv";
-    private final String FILE_JSON = "src/test/resources/out.json";
-
     @Test
     void fileNotFoundTest() {
         LoaderStat loader = new LoaderStat();
@@ -20,7 +17,7 @@ class LoaderStatTest {
     @Test
     void readFromFileTest() throws Exception {
         LoaderStat loader = new LoaderStat();
-        assertEquals(0, loader.readFromFile(FILE_CSV).size());
+        assertEquals(0, loader.readFromFile(CONST.FILE_CSV).size());
     }
 
     @Test
@@ -33,7 +30,7 @@ class LoaderStatTest {
     @Test
     void readJsonTest() {
         LoaderStat loader = new LoaderStat();
-        List<Stat> data = loader.readJson(FILE_JSON);
+        List<Stat> data = loader.readJson(CONST.FILE_JSON);
         assertEquals(0, data.size());
     }
 
