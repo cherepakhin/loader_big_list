@@ -8,23 +8,32 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LoaderStatTest {
 
+    private final String FILE_CSV = "src/test/resources/out.csv";
+    private final String FILE_JSON = "src/test/resources/out.json";
+
     @Test
-    void readFromFile() {
+    void fileNotFoundTest() {
         LoaderStat loader = new LoaderStat();
-        assertEquals(0, loader.readFromFile("").size());
+        assertThrows(Exception.class, () -> loader.readFromFile(""));
     }
 
     @Test
-    void readCsv() {
+    void readFromFileTest() throws Exception {
+        LoaderStat loader = new LoaderStat();
+        assertEquals(0, loader.readFromFile(FILE_CSV).size());
+    }
+
+    @Test
+    void readCsvTest() {
         LoaderStat loader = new LoaderStat();
         List<Stat> data = loader.readCsv("");
         assertEquals(0, data.size());
     }
 
     @Test
-    void readJson() {
+    void readJsonTest() {
         LoaderStat loader = new LoaderStat();
-        List<Stat> data = loader.readJson("");
+        List<Stat> data = loader.readJson(FILE_JSON);
         assertEquals(0, data.size());
     }
 
