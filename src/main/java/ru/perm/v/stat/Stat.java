@@ -8,6 +8,16 @@ public class Stat {
     private Long num = 0L;
     private Long weight = 0l;
 
+    public Stat() {
+    }
+
+    public Stat(String grp, String type, Long num, Long weight) {
+        this.grp = grp;
+        this.type = type;
+        this.num = num;
+        this.weight = weight;
+    }
+
     public String getGrp() {
         return grp;
     }
