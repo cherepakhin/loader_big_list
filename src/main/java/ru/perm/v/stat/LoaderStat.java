@@ -1,4 +1,4 @@
-package demo1;
+package ru.perm.v.stat;
 
 import java.io.File;
 import java.util.ArrayList;

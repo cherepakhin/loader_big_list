@@ -1,4 +1,4 @@
-package demo1;
+package ru.perm.v.stat;
 
 public class CONST {
     public static final String FILE_CSV = "src/test/resources/out.csv";
