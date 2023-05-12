@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class LoaderStatTest {
+class LoaderProductTest {
 
     @Test
-    void fileNotFoundTest() {
+    void fileNotFoundForUnknownExtensionTest() {
         LoaderProduct loader = new LoaderProduct();
         assertThrows(Exception.class, () -> loader.readFromFile(""));
     }
