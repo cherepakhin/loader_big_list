@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class LoaderStat implements ILoaderFile{
+public class LoaderStat {
     private final String JSON_EXT = ".json";
     private final String CSV_EXT = ".csv";
     private final String COMMA_DELIMITER = ",";
