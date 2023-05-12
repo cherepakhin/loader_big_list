@@ -20,7 +20,7 @@ public class LoaderCsvFile implements ILoaderObjForLoad {
      * @return список данных Stat
      * @throws Exception файл не найден
      */
-    public List<DummyObj> read(String filePath) throws IOException {
+    public List<Product> read(String filePath) throws IOException {
         List<List<String>> records = new ArrayList<>();
         BufferedReader br = new BufferedReader(new FileReader(filePath));
         String line;
@@ -29,9 +29,9 @@ public class LoaderCsvFile implements ILoaderObjForLoad {
             records.add(Arrays.asList(values));
         }
         records.remove(0); // Удаление заголовка
-        List<DummyObj> stats = new ArrayList<>();
+        List<Product> stats = new ArrayList<>();
         for (List<String> row : records) {
-            DummyObj stat = new DummyObj();
+            Product stat = new Product();
 
             stat.setGrp(row.get(0));
             stat.setType(row.get(1));
