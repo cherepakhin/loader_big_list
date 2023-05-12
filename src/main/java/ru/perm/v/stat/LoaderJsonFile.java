@@ -20,11 +20,11 @@ public class LoaderJsonFile implements ILoaderStat {
      * @throws Exception файл не найден
      */
     @Override
-    public List<Stat> read(String filePath) throws IOException {
+    public List<LoadObj> read(String filePath) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(DeserializationFeature.USE_JAVA_ARRAY_FOR_JSON_ARRAY, true);
         String body = FileUtils.readFileToString(new File(filePath), StandardCharsets.UTF_8);
-        List<Stat> stats = mapper.readValue(body, new TypeReference<ArrayList<Stat>>() {});
+        List<LoadObj> stats = mapper.readValue(body, new TypeReference<ArrayList<LoadObj>>() {});
         return stats;
     }
 }

@@ -11,13 +11,13 @@ class LoaderJsonFileTest {
     @Test
     void readTest() throws Exception {
         LoaderStat loader = new LoaderStat();
-        List<Stat> data = loader.readFromFile(CONSTS_FOR_TESTS.FILE_JSON);
+        List<LoadObj> data = loader.readFromFile(CONSTS_FOR_TESTS.FILE_JSON);
         assertEquals(4, data.size());
 
-        assertEquals(new Stat("grp1", "type1", 1L, 111L), data.get(0));
-        assertEquals(new Stat("grp1", "type1", 2L, 112L), data.get(1));
-        assertEquals(new Stat("grp2", "type1", 3L, 213L), data.get(2));
-        assertEquals(new Stat("grp2", "type2", 4L, 224L), data.get(3));
+        assertEquals(new LoadObj("grp1", "type1", 1L, 111L), data.get(0));
+        assertEquals(new LoadObj("grp1", "type1", 2L, 112L), data.get(1));
+        assertEquals(new LoadObj("grp2", "type1", 3L, 213L), data.get(2));
+        assertEquals(new LoadObj("grp2", "type2", 4L, 224L), data.get(3));
     }
 
 }

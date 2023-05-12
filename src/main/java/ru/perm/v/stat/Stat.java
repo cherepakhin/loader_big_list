@@ -1,77 +1,47 @@
 package ru.perm.v.stat;
 
 public class Stat {
-    private String grp = "";
-    private String type = "";
-    private Long num = 0L;
-    private Long weight = 0l;
+    private Integer countDublicate =0;
+    private Integer sumWigth = 0;
+    private Integer minWigth = 0;
+    private Integer maxWigth = 0;
 
-    public Stat() {
+    public Stat(Integer countDublicate, Integer sumWigth, Integer minWigth, Integer maxWigth) {
+        this.countDublicate = countDublicate;
+        this.sumWigth = sumWigth;
+        this.minWigth = minWigth;
+        this.maxWigth = maxWigth;
     }
 
-    public Stat(String grp, String type, Long num, Long weight) {
-        this.grp = grp;
-        this.type = type;
-        this.num = num;
-        this.weight = weight;
+    public Integer getCountDublicate() {
+        return countDublicate;
     }
 
-    public String getGrp() {
-        return grp;
+    public void setCountDublicate(Integer countDublicate) {
+        this.countDublicate = countDublicate;
     }
 
-    public void setGrp(String grp) {
-        this.grp = grp;
+    public Integer getSumWigth() {
+        return sumWigth;
     }
 
-    public String getType() {
-        return type;
+    public void setSumWigth(Integer sumWigth) {
+        this.sumWigth = sumWigth;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public Integer getMinWigth() {
+        return minWigth;
     }
 
-    public Long getNum() {
-        return num;
+    public void setMinWigth(Integer minWigth) {
+        this.minWigth = minWigth;
     }
 
-    public void setNum(Long num) {
-        this.num = num;
+    public Integer getMaxWigth() {
+        return maxWigth;
     }
 
-    public Long getWeight() {
-        return weight;
-    }
-
-    public void setWeight(Long weight) {
-        this.weight = weight;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Stat stat = (Stat) o;
-        return grp.equals(stat.grp) &&
-                type.equals(stat.type) &&
-                num.equals(stat.num) &&
-                weight.equals(stat.weight);
-    }
-
-    @Override
-    public int hashCode() {
-        return 1;
-//        return Objects.hash(grp, type, num, weight);
-    }
-
-    @Override
-    public String toString() {
-        return "Stat{" +
-                "grp='" + grp + '\'' +
-                ", type='" + type + '\'' +
-                ", num=" + num +
-                ", weight=" + weight +
-                '}';
+    public void setMaxWigth(Integer maxWigth) {
+        this.maxWigth = maxWigth;
     }
 }

@@ -12,12 +12,12 @@ class LoaderCsvFileTest {
     @Test
     void readTest() throws IOException {
         LoaderCsvFile loader = new LoaderCsvFile();
-        List<Stat> data = loader.read(CONSTS_FOR_TESTS.FILE_CSV);
+        List<LoadObj> data = loader.read(CONSTS_FOR_TESTS.FILE_CSV);
         assertEquals(4, data.size());
 
-        assertEquals(new Stat("group1", "type1", 1L, 111L), data.get(0));
-        assertEquals(new Stat("group1", "type1", 2L, 112L), data.get(1));
-        assertEquals(new Stat("group2", "type1", 3L, 213L), data.get(2));
-        assertEquals(new Stat("group2", "type2", 4L, 224L), data.get(3));
+        assertEquals(new LoadObj("group1", "type1", 1L, 111L), data.get(0));
+        assertEquals(new LoadObj("group1", "type1", 2L, 112L), data.get(1));
+        assertEquals(new LoadObj("group2", "type1", 3L, 213L), data.get(2));
+        assertEquals(new LoadObj("group2", "type2", 4L, 224L), data.get(3));
     }
 }
