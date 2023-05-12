@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class LoaderCsvFile implements ILoaderObj {
+public class LoaderCsvFile implements ILoaderObjForLoad {
 
     private final String COMMA_DELIMITER = ",";
 

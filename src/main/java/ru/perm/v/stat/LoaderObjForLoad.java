@@ -10,13 +10,13 @@ import java.util.Map;
 /**
  * Загрузчик данных
  */
-public class LoaderObj {
+public class LoaderObjForLoad {
     private final String JSON_EXT = "json";
     private final String CSV_EXT = "csv";
 
-    private Map<String, ILoaderObj> mapLoaderByExtension = new HashMap<>();
+    private Map<String, ILoaderObjForLoad> mapLoaderByExtension = new HashMap<>();
 
-    public LoaderObj() {
+    public LoaderObjForLoad() {
         mapLoaderByExtension.put(JSON_EXT, new LoaderJsonFile());
         mapLoaderByExtension.put(CSV_EXT, new LoaderCsvFile());
     }

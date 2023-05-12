@@ -23,7 +23,7 @@ public class App {
             if (file.equals("exit")) {
                 exit(0);
             }
-            LoaderObj loaderStat = new LoaderObj();
+            LoaderObjForLoad loaderStat = new LoaderObjForLoad();
             try {
                 long startTime = System.currentTimeMillis();
 

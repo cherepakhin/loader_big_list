@@ -10,7 +10,7 @@ class LoaderJsonFileTest {
 
     @Test
     void readTest() throws Exception {
-        LoaderObj loader = new LoaderObj();
+        LoaderObjForLoad loader = new LoaderObjForLoad();
         List<ObjForLoad> data = loader.readFromFile(CONSTS_FOR_TESTS.FILE_JSON);
         assertEquals(4, data.size());
 

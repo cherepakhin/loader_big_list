@@ -8,7 +8,7 @@ class LoaderStatTest {
 
     @Test
     void fileNotFoundTest() {
-        LoaderObj loader = new LoaderObj();
+        LoaderObjForLoad loader = new LoaderObjForLoad();
         assertThrows(Exception.class, () -> loader.readFromFile(""));
     }
 }
