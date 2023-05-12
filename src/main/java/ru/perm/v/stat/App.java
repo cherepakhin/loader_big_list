@@ -1,8 +1,11 @@
 package ru.perm.v.stat;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.commons.io.FileUtils;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.List;
 import java.util.Scanner;
 
@@ -29,9 +32,9 @@ public class App {
 
                 // print result
                 long timeElapsed = System.currentTimeMillis() - startTime;
-                // print result for test
-                // System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(stat));
-                System.out.printf("Time elapsed: %s ms\n", timeElapsed);
+                // write result
+                FileUtils.writeStringToFile(new File("result.txt"), mapper.writerWithDefaultPrettyPrinter().writeValueAsString(stat), Charset.defaultCharset());
+                System.out.printf("Writed to file \"result.txt\". Time elapsed: %s ms\n", timeElapsed);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
