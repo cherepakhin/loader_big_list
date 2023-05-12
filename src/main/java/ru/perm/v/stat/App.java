@@ -2,6 +2,7 @@ package ru.perm.v.stat;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.FileUtils;
+import ru.perm.v.stat.loader.LoaderProduct;
 
 import java.io.File;
 import java.io.IOException;

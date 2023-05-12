@@ -1,4 +1,6 @@
-package ru.perm.v.stat;
+package ru.perm.v.stat.loader;
+
+import ru.perm.v.stat.Product;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

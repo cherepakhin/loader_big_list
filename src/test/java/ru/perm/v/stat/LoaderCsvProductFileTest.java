@@ -1,6 +1,7 @@
 package ru.perm.v.stat;
 
 import org.junit.jupiter.api.Test;
+import ru.perm.v.stat.loader.LoaderCsvProductFile;
 
 import java.io.IOException;
 import java.util.List;

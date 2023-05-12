@@ -1,6 +1,7 @@
-package ru.perm.v.stat;
+package ru.perm.v.stat.loader;
 
 import org.apache.commons.io.FilenameUtils;
+import ru.perm.v.stat.Product;
 
 import java.io.File;
 import java.util.HashMap;

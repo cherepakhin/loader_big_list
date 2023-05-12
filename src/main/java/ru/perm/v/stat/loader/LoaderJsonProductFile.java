@@ -1,9 +1,10 @@
-package ru.perm.v.stat;
+package ru.perm.v.stat.loader;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.FileUtils;
+import ru.perm.v.stat.Product;
 
 import java.io.File;
 import java.io.IOException;
