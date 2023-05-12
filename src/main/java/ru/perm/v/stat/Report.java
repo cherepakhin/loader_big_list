@@ -1,24 +1,24 @@
 package ru.perm.v.stat;
 
 public class Report {
-    private Integer countDublicate = 0;
+    private Integer countDuplicate = 0;
     private Integer sumWeight = 0;
     private Integer minWeight = 0;
     private Integer maxWeight = 0;
 
-    public Report(Integer countDublicate, Integer sumWeight, Integer minWeight, Integer maxWeight) {
-        this.countDublicate = countDublicate;
+    public Report(Integer countDuplicate, Integer sumWeight, Integer minWeight, Integer maxWeight) {
+        this.countDuplicate = countDuplicate;
         this.sumWeight = sumWeight;
         this.minWeight = minWeight;
         this.maxWeight = maxWeight;
     }
 
-    public Integer getCountDublicate() {
-        return countDublicate;
+    public Integer getCountDuplicate() {
+        return countDuplicate;
     }
 
-    public void setCountDublicate(Integer countDublicate) {
-        this.countDublicate = countDublicate;
+    public void setCountDuplicate(Integer countDuplicate) {
+        this.countDuplicate = countDuplicate;
     }
 
     public Integer getSumWeight() {
