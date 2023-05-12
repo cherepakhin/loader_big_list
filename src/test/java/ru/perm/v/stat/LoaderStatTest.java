@@ -46,4 +46,8 @@ class LoaderStatTest {
         assertEquals(new Stat("grp2", "type2", 4L, 224L), data.get(3));
     }
 
+    @Test
+    void readFromFile() {
+    }
+
 }
