@@ -11,7 +11,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LoaderJsonFile implements ILoaderStat {
+public class LoaderJsonFile implements ILoaderObj {
 
     /**
      * Загрузить данные из файла JSON
@@ -20,11 +20,11 @@ public class LoaderJsonFile implements ILoaderStat {
      * @throws Exception файл не найден
      */
     @Override
-    public List<LoadObj> read(String filePath) throws IOException {
+    public List<ObjForLoad> read(String filePath) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(DeserializationFeature.USE_JAVA_ARRAY_FOR_JSON_ARRAY, true);
         String body = FileUtils.readFileToString(new File(filePath), StandardCharsets.UTF_8);
-        List<LoadObj> stats = mapper.readValue(body, new TypeReference<ArrayList<LoadObj>>() {});
+        List<ObjForLoad> stats = mapper.readValue(body, new TypeReference<ArrayList<ObjForLoad>>() {});
         return stats;
     }
 }

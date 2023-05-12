@@ -2,15 +2,15 @@ package ru.perm.v.stat;
 
 public class Stat {
     private Integer countDublicate =0;
-    private Integer sumWigth = 0;
-    private Integer minWigth = 0;
-    private Integer maxWigth = 0;
+    private Integer sumWeight = 0;
+    private Integer minWeight = 0;
+    private Integer maxWeight = 0;
 
-    public Stat(Integer countDublicate, Integer sumWigth, Integer minWigth, Integer maxWigth) {
+    public Stat(Integer countDublicate, Integer sumWeight, Integer minWeight, Integer maxWeight) {
         this.countDublicate = countDublicate;
-        this.sumWigth = sumWigth;
-        this.minWigth = minWigth;
-        this.maxWigth = maxWigth;
+        this.sumWeight = sumWeight;
+        this.minWeight = minWeight;
+        this.maxWeight = maxWeight;
     }
 
     public Integer getCountDublicate() {
@@ -21,27 +21,27 @@ public class Stat {
         this.countDublicate = countDublicate;
     }
 
-    public Integer getSumWigth() {
-        return sumWigth;
+    public Integer getSumWeight() {
+        return sumWeight;
     }
 
-    public void setSumWigth(Integer sumWigth) {
-        this.sumWigth = sumWigth;
+    public void setSumWeight(Integer sumWeight) {
+        this.sumWeight = sumWeight;
     }
 
-    public Integer getMinWigth() {
-        return minWigth;
+    public Integer getMinWeight() {
+        return minWeight;
     }
 
-    public void setMinWigth(Integer minWigth) {
-        this.minWigth = minWigth;
+    public void setMinWeight(Integer minWeight) {
+        this.minWeight = minWeight;
     }
 
-    public Integer getMaxWigth() {
-        return maxWigth;
+    public Integer getMaxWeight() {
+        return maxWeight;
     }
 
-    public void setMaxWigth(Integer maxWigth) {
-        this.maxWigth = maxWigth;
+    public void setMaxWeight(Integer maxWeight) {
+        this.maxWeight = maxWeight;
     }
 }

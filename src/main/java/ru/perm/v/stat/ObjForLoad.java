@@ -1,15 +1,15 @@
 package ru.perm.v.stat;
 
-public class LoadObj {
+public class ObjForLoad {
     private String grp = "";
     private String type = "";
     private Long num = 0L;
-    private Long weight = 0l;
+    private Long weight = 0L;
 
-    public LoadObj() {
+    public ObjForLoad() {
     }
 
-    public LoadObj(String grp, String type, Long num, Long weight) {
+    public ObjForLoad(String grp, String type, Long num, Long weight) {
         this.grp = grp;
         this.type = type;
         this.num = num;
@@ -52,7 +52,7 @@ public class LoadObj {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        LoadObj stat = (LoadObj) o;
+        ObjForLoad stat = (ObjForLoad) o;
         return grp.equals(stat.grp) &&
                 type.equals(stat.type) &&
                 num.equals(stat.num) &&

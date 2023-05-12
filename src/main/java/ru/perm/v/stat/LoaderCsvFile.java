@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class LoaderCsvFile implements ILoaderStat {
+public class LoaderCsvFile implements ILoaderObj {
 
     private final String COMMA_DELIMITER = ",";
 
@@ -20,7 +20,7 @@ public class LoaderCsvFile implements ILoaderStat {
      * @return список данных Stat
      * @throws Exception файл не найден
      */
-    public List<LoadObj> read(String filePath) throws IOException {
+    public List<ObjForLoad> read(String filePath) throws IOException {
         List<List<String>> records = new ArrayList<>();
         BufferedReader br = new BufferedReader(new FileReader(filePath));
         String line;
@@ -29,9 +29,9 @@ public class LoaderCsvFile implements ILoaderStat {
             records.add(Arrays.asList(values));
         }
         records.remove(0); // Удаление заголовка
-        List<LoadObj> stats = new ArrayList<>();
+        List<ObjForLoad> stats = new ArrayList<>();
         for (List<String> row : records) {
-            LoadObj stat = new LoadObj();
+            ObjForLoad stat = new ObjForLoad();
 
             stat.setGrp(row.get(0));
             stat.setType(row.get(1));

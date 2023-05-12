@@ -23,12 +23,12 @@ public class App {
             if (file.equals("exit")) {
                 exit(0);
             }
-            LoaderStat loaderStat = new LoaderStat();
+            LoaderObj loaderStat = new LoaderObj();
             try {
                 long startTime = System.currentTimeMillis();
 
                 // process
-                List<LoadObj> stat = loaderStat.readFromFile(file);
+                List<ObjForLoad> stat = loaderStat.readFromFile(file);
 
                 long timeElapsed = System.currentTimeMillis() - startTime;
                 // write result to file

@@ -10,13 +10,13 @@ import java.util.Map;
 /**
  * Загрузчик данных
  */
-public class LoaderStat {
+public class LoaderObj {
     private final String JSON_EXT = "json";
     private final String CSV_EXT = "csv";
 
-    private Map<String, ILoaderStat> mapLoaderByExtension = new HashMap<>();
+    private Map<String, ILoaderObj> mapLoaderByExtension = new HashMap<>();
 
-    public LoaderStat() {
+    public LoaderObj() {
         mapLoaderByExtension.put(JSON_EXT, new LoaderJsonFile());
         mapLoaderByExtension.put(CSV_EXT, new LoaderCsvFile());
     }
@@ -28,7 +28,7 @@ public class LoaderStat {
      * @return список данных Stat
      * @throws Exception файл не найден
      */
-    public List<LoadObj> readFromFile(String filePath) throws Exception {
+    public List<ObjForLoad> readFromFile(String filePath) throws Exception {
         File file = new File(filePath);
         if (!file.exists() || file.isDirectory()) {
             throw new Exception(String.format("File not found %s", filePath));
