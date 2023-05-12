@@ -1,7 +1,7 @@
 package ru.perm.v.stat;
 
 public class Stat {
-    private Integer countDublicate =0;
+    private Integer countDublicate = 0;
     private Integer sumWeight = 0;
     private Integer minWeight = 0;
     private Integer maxWeight = 0;
