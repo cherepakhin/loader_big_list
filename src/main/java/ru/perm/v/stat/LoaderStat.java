@@ -18,6 +18,7 @@ public class LoaderStat {
 
     public LoaderStat() {
         mapLoaderByExtension.put(JSON_EXT, new LoaderJsonFile());
+        mapLoaderByExtension.put(CSV_EXT, new LoaderCsvFile());
     }
 
     /**

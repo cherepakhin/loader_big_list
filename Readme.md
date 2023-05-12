@@ -61,6 +61,15 @@ java -jar test-generator.jar -file "out.csv" -format csv -count 10 000 000
 
 ![Отчет jacoco](doc/jacoco_report.png)
 
+<b>Использование</b>
+<br/>
+````shell
+Enter path file for load (csv/json): doc/out.csv
+Elapsed     7,571 ms
+Enter path file for load (csv/json): doc/out.json
+Elapsed   9,337 ms
+Enter path file for load (csv/json): exit
+````
 <b>TODO</b>
 
 1. Прикрутить какую-нибудь Arango (https://github.com/cherepakhin/arango-data) , как средство обработки/получения данных
