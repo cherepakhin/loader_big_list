@@ -62,5 +62,5 @@ java -jar test-generator.jar -file "out.csv" -format csv -count 10 000 000
 
 <b>TODO</b>
 
-1. Прикрутить какую-нибудь Arango (https://github.com/cherepakhin/arango-data) , как средство получения данных
+1. Прикрутить какую-нибудь Arango (https://github.com/cherepakhin/arango-data) , как средство обработки/получения данных
 2. Или другую вертикальную БД
