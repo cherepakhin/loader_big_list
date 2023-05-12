@@ -11,8 +11,8 @@ class LoaderCsvFileTest {
 
     @Test
     void readTest() throws IOException {
-        LoaderCsvFile loader = new LoaderCsvFile(CONST.FILE_CSV);
-        List<Stat> data = loader.read();
+        LoaderCsvFile loader = new LoaderCsvFile();
+        List<Stat> data = loader.read(CONST.FILE_CSV);
         assertEquals(4, data.size());
 
         assertEquals(new Stat("group1", "type1", 1L, 111L), data.get(0));

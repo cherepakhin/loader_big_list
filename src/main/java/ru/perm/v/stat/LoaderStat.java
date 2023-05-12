@@ -1,14 +1,24 @@
 package ru.perm.v.stat;
 
+import org.apache.commons.io.FilenameUtils;
+
 import java.io.File;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Загрузчик данных
  */
 public class LoaderStat {
-    private final String JSON_EXT = ".json";
-    private final String CSV_EXT = ".csv";
+    private final String JSON_EXT = "json";
+    private final String CSV_EXT = "csv";
+
+    private Map<String, ILoaderStat> mapLoaderByExtension = new HashMap<>();
+
+    public LoaderStat() {
+        mapLoaderByExtension.put(JSON_EXT, new LoaderJsonFile());
+    }
 
     /**
      * Загрузить данные из файла
@@ -22,11 +32,9 @@ public class LoaderStat {
         if (!file.exists() || file.isDirectory()) {
             throw new Exception(String.format("File not found %s", filePath));
         }
-        if (filePath.contains(JSON_EXT)) {
-            return new LoaderJsonFile(filePath).read();
-        }
-        if (filePath.contains(CSV_EXT)) {
-            return new LoaderCsvFile(filePath).read();
+        String extension = FilenameUtils.getExtension(filePath); // json, csv
+        if (mapLoaderByExtension.containsKey(extension)) {
+            return mapLoaderByExtension.get(extension).read(filePath);
         }
         throw new Exception("File extension not recognized");
     }

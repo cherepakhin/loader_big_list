@@ -10,10 +10,8 @@ import java.util.List;
 public class LoaderCsvFile implements ILoaderStat {
 
     private final String COMMA_DELIMITER = ",";
-    private String filePath;
 
-    public LoaderCsvFile(String filePath) {
-        this.filePath = filePath;
+    public LoaderCsvFile() {
     }
 
     /**
@@ -22,7 +20,7 @@ public class LoaderCsvFile implements ILoaderStat {
      * @return список данных Stat
      * @throws Exception файл не найден
      */
-    public List<Stat> read() throws IOException {
+    public List<Stat> read(String filePath) throws IOException {
         List<List<String>> records = new ArrayList<>();
         BufferedReader br = new BufferedReader(new FileReader(filePath));
         String line;
