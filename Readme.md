@@ -49,7 +49,6 @@ java -jar test-generator.jar -file "out.csv" -format csv -count 10 000 000
 <li>Традиционная СУБД с индексом (postgre)</li>
 <li>С использованием каких-нибудь столбцовых (колоночных) БД (ClickHouse, Arango ...)</li>
 </ul>
-<br/>
 <b>Покрытие тестами:</b><br/>
 Использован jacoco
 
