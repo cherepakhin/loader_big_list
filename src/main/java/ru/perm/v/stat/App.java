@@ -29,7 +29,8 @@ public class App {
 
                 // print result
                 long timeElapsed = System.currentTimeMillis() - startTime;
-                System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(stat));
+                // print result for test
+                // System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(stat));
                 System.out.printf("Time elapsed: %s ms\n", timeElapsed);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
