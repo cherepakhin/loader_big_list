@@ -64,4 +64,14 @@ public class Stat {
         return 1;
 //        return Objects.hash(grp, type, num, weight);
     }
+
+    @Override
+    public String toString() {
+        return "Stat{" +
+                "grp='" + grp + '\'' +
+                ", type='" + type + '\'' +
+                ", num=" + num +
+                ", weight=" + weight +
+                '}';
+    }
 }
