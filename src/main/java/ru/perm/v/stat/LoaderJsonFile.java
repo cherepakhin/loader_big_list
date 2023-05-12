@@ -24,8 +24,7 @@ public class LoaderJsonFile implements ILoaderStat {
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(DeserializationFeature.USE_JAVA_ARRAY_FOR_JSON_ARRAY, true);
         String body = FileUtils.readFileToString(new File(filePath), StandardCharsets.UTF_8);
-        List<Stat> stats = mapper.readValue(body, new TypeReference<ArrayList<Stat>>() {
-        });
+        List<Stat> stats = mapper.readValue(body, new TypeReference<ArrayList<Stat>>() {});
         return stats;
     }
 }
