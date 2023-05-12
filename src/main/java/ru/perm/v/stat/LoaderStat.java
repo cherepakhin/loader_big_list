@@ -12,11 +12,20 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Загрузчик данных
+ */
 public class LoaderStat {
     private final String JSON_EXT = ".json";
     private final String CSV_EXT = ".csv";
     private final String COMMA_DELIMITER = ",";
 
+    /**
+     * Загрузить данные из файла
+     * @param filePath файл json или csv
+     * @return список данных Stat
+     * @throws Exception файл не найден
+     */
     public List<Stat> readFromFile(String filePath) throws Exception {
         File file = new File(filePath);
         if (!file.exists() || file.isDirectory()) {
@@ -31,6 +40,12 @@ public class LoaderStat {
         return new ArrayList<>();
     }
 
+    /**
+     * Загрузить данные из файла JSON
+     * @param path json файл
+     * @return список данных Stat
+     * @throws Exception файл не найден
+     */
     public List<Stat> readJson(String path) throws IOException {
         List<List<String>> records = new ArrayList<>();
         ObjectMapper mapper = new ObjectMapper();
@@ -41,6 +56,12 @@ public class LoaderStat {
         return stats;
     }
 
+    /**
+     * Загрузить данные из файла CSV
+     * @param path csv файл
+     * @return список данных Stat
+     * @throws Exception файл не найден
+     */
     public List<Stat> readCsv(String path) throws IOException {
         List<List<String>> records = new ArrayList<>();
         BufferedReader br = new BufferedReader(new FileReader(path));
