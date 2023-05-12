@@ -24,7 +24,7 @@ class LoaderStatTest {
     }
 
     @Test
-    void readCsvTest() {
+    void readCsvTest() throws IOException {
         LoaderStat loader = new LoaderStat();
         List<Stat> data = loader.readCsv(CONST.FILE_CSV);
         assertEquals(4, data.size());

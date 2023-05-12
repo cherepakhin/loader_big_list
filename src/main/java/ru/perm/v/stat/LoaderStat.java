@@ -3,7 +3,6 @@ package ru.perm.v.stat;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.type.CollectionType;
 import com.fasterxml.jackson.databind.type.TypeFactory;
 import org.apache.commons.io.FileUtils;
 
@@ -13,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class LoaderStat {
+public class LoaderStat implements ILoaderFile{
     private final String JSON_EXT = ".json";
     private final String CSV_EXT = ".csv";
     private final String COMMA_DELIMITER = ",";
@@ -37,24 +36,18 @@ public class LoaderStat {
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(DeserializationFeature.USE_JAVA_ARRAY_FOR_JSON_ARRAY, true);
         TypeFactory typeFactory = mapper.getTypeFactory();
-//        CollectionType collectionType = typeFactory.constructCollectionType(
-//                List.class, Stat.class);
-
         String body = FileUtils.readFileToString(new File(path), StandardCharsets.UTF_8);
         List<Stat> stats = mapper.readValue(body, new TypeReference<ArrayList<Stat>>() {});
         return stats;
     }
 
-    public List<Stat> readCsv(String path) {
+    public List<Stat> readCsv(String path) throws IOException {
         List<List<String>> records = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] values = line.split(COMMA_DELIMITER);
-                records.add(Arrays.asList(values));
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+        BufferedReader br = new BufferedReader(new FileReader(path));
+        String line;
+        while ((line = br.readLine()) != null) {
+            String[] values = line.split(COMMA_DELIMITER);
+            records.add(Arrays.asList(values));
         }
         records.remove(0); // Удаление заголовка
         List<Stat> stats = new ArrayList<>();
