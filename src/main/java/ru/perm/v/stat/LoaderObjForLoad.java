@@ -28,7 +28,7 @@ public class LoaderObjForLoad {
      * @return список данных Stat
      * @throws Exception файл не найден
      */
-    public List<ObjForLoad> readFromFile(String filePath) throws Exception {
+    public List<DummyObj> readFromFile(String filePath) throws Exception {
         File file = new File(filePath);
         if (!file.exists() || file.isDirectory()) {
             throw new Exception(String.format("File not found %s", filePath));

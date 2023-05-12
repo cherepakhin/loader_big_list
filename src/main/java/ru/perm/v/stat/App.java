@@ -28,7 +28,7 @@ public class App {
                 long startTime = System.currentTimeMillis();
 
                 // process
-                List<ObjForLoad> stat = loaderStat.readFromFile(file);
+                List<DummyObj> stat = loaderStat.readFromFile(file);
 
                 long timeElapsed = System.currentTimeMillis() - startTime;
                 // write result to file
