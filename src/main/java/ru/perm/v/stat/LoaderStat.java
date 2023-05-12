@@ -1,7 +1,6 @@
 package ru.perm.v.stat;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -29,6 +28,6 @@ public class LoaderStat {
         if (filePath.contains(CSV_EXT)) {
             return new LoaderCsvFile(filePath).read();
         }
-        return new ArrayList<>();
+        throw new Exception("File extension not recognized");
     }
 }
