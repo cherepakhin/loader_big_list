@@ -1,6 +1,14 @@
 package ru.perm.v.stat;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.type.CollectionType;
+import com.fasterxml.jackson.databind.type.TypeFactory;
+import org.apache.commons.io.FileUtils;
+
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -24,9 +32,17 @@ public class LoaderStat {
         return new ArrayList<>();
     }
 
-    public List<Stat> readJson(String path) {
-        List<Stat> data = new ArrayList<>();
-        return data;
+    public List<Stat> readJson(String path) throws IOException {
+        List<List<String>> records = new ArrayList<>();
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(DeserializationFeature.USE_JAVA_ARRAY_FOR_JSON_ARRAY, true);
+        TypeFactory typeFactory = mapper.getTypeFactory();
+//        CollectionType collectionType = typeFactory.constructCollectionType(
+//                List.class, Stat.class);
+
+        String body = FileUtils.readFileToString(new File(path), StandardCharsets.UTF_8);
+        List<Stat> stats = mapper.readValue(body, new TypeReference<ArrayList<Stat>>() {});
+        return stats;
     }
 
     public List<Stat> readCsv(String path) {

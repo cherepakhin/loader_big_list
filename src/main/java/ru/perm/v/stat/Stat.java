@@ -55,11 +55,15 @@ public class Stat {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Stat stat = (Stat) o;
-        return Objects.equals(grp, stat.grp) && Objects.equals(type, stat.type) && Objects.equals(num, stat.num) && Objects.equals(weight, stat.weight);
+        return grp.equals(stat.grp) &&
+                type.equals(stat.type) &&
+                num.equals(stat.num) &&
+                weight.equals(stat.weight);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(grp, type, num, weight);
+        return 1;
+//        return Objects.hash(grp, type, num, weight);
     }
 }
