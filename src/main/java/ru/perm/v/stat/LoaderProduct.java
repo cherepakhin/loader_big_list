@@ -14,7 +14,7 @@ public class LoaderProduct {
     private final String JSON_EXT = "json";
     private final String CSV_EXT = "csv";
 
-    private Map<String, ILoaderObjForLoad> mapLoaderByExtension = new HashMap<>();
+    private Map<String, ILoaderProduct> mapLoaderByExtension = new HashMap<>();
 
     public LoaderProduct() {
         mapLoaderByExtension.put(JSON_EXT, new LoaderJsonProductFile());
