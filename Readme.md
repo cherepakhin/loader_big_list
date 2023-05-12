@@ -45,7 +45,7 @@ java -jar test-generator.jar -file "out.csv" -format csv -count 10 000 000
 <br/>
 <ul>
 <li>Решение в "лоб", средствами java (СДЕЛАНО)</li>
-<li>Традиционная СУБД с индексом (postgre)</li>
+<li>Традиционная СУБД с индексом (встроенная postgre/mysql внутри приложения)</li>
 <li>С использованием каких-нибудь столбцовых (колоночных) БД (ClickHouse, Arango ...)</li>
 </ul>
 
