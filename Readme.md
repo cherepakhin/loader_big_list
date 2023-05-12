@@ -23,7 +23,7 @@
   <li>Файлы со списком объектов создаются с помощью утилиты doc/test-generator.jar.</li>
   <li>Файлы создаются в кодировке UTF-8.</li>
 </ul>
-<b>Команда запуска:</b>
+<b>Генерация тестовых файлов:</b>
 <br/>
 java -jar test-generator.jar -file "out.csv" -format csv -count 10 000 000<br/>
 <ul>
