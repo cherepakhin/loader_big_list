@@ -7,11 +7,11 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class LoaderCsvFileTest {
+class LoaderCsvProductFileTest {
 
     @Test
     void readTest() throws IOException {
-        LoaderCsvFile loader = new LoaderCsvFile();
+        LoaderCsvProductFile loader = new LoaderCsvProductFile();
         List<Product> data = loader.read(CONSTS_FOR_TESTS.FILE_CSV);
         assertEquals(4, data.size());
 

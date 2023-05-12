@@ -17,8 +17,8 @@ public class LoaderProduct {
     private Map<String, ILoaderObjForLoad> mapLoaderByExtension = new HashMap<>();
 
     public LoaderProduct() {
-        mapLoaderByExtension.put(JSON_EXT, new LoaderJsonFile());
-        mapLoaderByExtension.put(CSV_EXT, new LoaderCsvFile());
+        mapLoaderByExtension.put(JSON_EXT, new LoaderJsonProductFile());
+        mapLoaderByExtension.put(CSV_EXT, new LoaderCsvProductFile());
     }
 
     /**

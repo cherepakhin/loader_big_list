@@ -6,7 +6,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class LoaderJsonFileTest {
+class LoaderJsonProductFileTest {
 
     @Test
     void readTest() throws Exception {

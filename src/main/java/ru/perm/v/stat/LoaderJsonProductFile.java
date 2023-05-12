@@ -11,7 +11,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LoaderJsonFile implements ILoaderObjForLoad {
+public class LoaderJsonProductFile implements ILoaderObjForLoad {
 
     /**
      * Загрузить данные из файла JSON
