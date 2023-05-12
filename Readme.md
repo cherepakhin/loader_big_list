@@ -25,7 +25,11 @@
 </ul>
 <b>Генерация тестовых файлов:</b>
 <br/>
-java -jar test-generator.jar -file "out.csv" -format csv -count 10 000 000<br/>
+
+````shell
+java -jar test-generator.jar -file "out.csv" -format csv -count 10 000 000
+````
+<br/>
 <ul>
   <li>file – выходной файл</li>
   <li>format – формат файла (json или csv)</li>
