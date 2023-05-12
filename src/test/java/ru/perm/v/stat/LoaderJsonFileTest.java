@@ -11,7 +11,7 @@ class LoaderJsonFileTest {
     @Test
     void readTest() throws Exception {
         LoaderStat loader = new LoaderStat();
-        List<Stat> data = loader.readFromFile(CONST.FILE_JSON);
+        List<Stat> data = loader.readFromFile(CONSTS_FOR_TESTS.FILE_JSON);
         assertEquals(4, data.size());
 
         assertEquals(new Stat("grp1", "type1", 1L, 111L), data.get(0));
