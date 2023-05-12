@@ -24,9 +24,9 @@ class LoaderStatTest {
     }
 
     @Test
-    void readCsvTest() throws IOException {
+    void readCsvTest() throws Exception {
         LoaderStat loader = new LoaderStat();
-        List<Stat> data = loader.readCsv(CONST.FILE_CSV);
+        List<Stat> data = loader.readFromFile(CONST.FILE_CSV);
         assertEquals(4, data.size());
 
         assertEquals(new Stat("group1","type1",1L,111L), data.get(0));
@@ -36,9 +36,9 @@ class LoaderStatTest {
     }
 
     @Test
-    void readJsonTest() throws IOException {
+    void readJsonTest() throws Exception {
         LoaderStat loader = new LoaderStat();
-        List<Stat> data = loader.readJson(CONST.FILE_JSON);
+        List<Stat> data = loader.readFromFile(CONST.FILE_JSON);
         assertEquals(4, data.size());
 
         assertEquals(new Stat("grp1","type1",1L,111L), data.get(0));

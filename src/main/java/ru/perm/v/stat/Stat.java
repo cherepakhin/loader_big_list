@@ -1,7 +1,5 @@
 package ru.perm.v.stat;
 
-import java.util.Objects;
-
 public class Stat {
     private String grp = "";
     private String type = "";
