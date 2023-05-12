@@ -11,7 +11,7 @@ public class App {
         Scanner in = new Scanner(System.in);
         while (true) {
             String file = "";
-            System.out.print("Enter path file for load: ");
+            System.out.print("Enter path file for load (csv/json): ");
             file = in.next();
             if (file.equals("exit")) {
                 exit(0);
