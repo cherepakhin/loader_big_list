@@ -23,7 +23,11 @@ public class App {
             LoaderStat loaderStat = new LoaderStat();
             try {
                 long startTime = System.currentTimeMillis();
+
+                // process
                 List<Stat> stat = loaderStat.readFromFile(file);
+
+                // print result
                 long timeElapsed = System.currentTimeMillis() - startTime;
                 System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(stat));
                 System.out.printf("Time elapsed: %s ms\n", timeElapsed);
