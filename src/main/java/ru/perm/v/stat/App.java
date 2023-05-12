@@ -30,10 +30,10 @@ public class App {
                 // process
                 List<Stat> stat = loaderStat.readFromFile(file);
 
-                // print result
                 long timeElapsed = System.currentTimeMillis() - startTime;
                 // write result
                 FileUtils.writeStringToFile(new File("result.txt"), mapper.writerWithDefaultPrettyPrinter().writeValueAsString(stat), Charset.defaultCharset());
+                // print result
                 System.out.printf("Writed to file \"result.txt\". Time elapsed: %s ms\n", timeElapsed);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
