@@ -31,9 +31,9 @@ public class App {
                 List<Stat> stat = loaderStat.readFromFile(file);
 
                 long timeElapsed = System.currentTimeMillis() - startTime;
-                // write result
+                // write result to file
                 FileUtils.writeStringToFile(new File("result.txt"), mapper.writerWithDefaultPrettyPrinter().writeValueAsString(stat), Charset.defaultCharset());
-                // print result
+                // print time
                 System.out.printf("Writed to file \"result.txt\". Time elapsed: %s ms\n", timeElapsed);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
