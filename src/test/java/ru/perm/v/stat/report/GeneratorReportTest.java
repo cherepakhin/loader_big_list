@@ -48,8 +48,8 @@ class GeneratorReportTest {
 
         GeneratorReport generatorReport = new GeneratorReport();
         List<String> report = generatorReport.print(resultMain);
+        System.out.println(report);
 
-        assertEquals(5, report.size());
-//        assertEquals(List.of(""), report);
+        assertEquals(7, report.size());
     }
 }
