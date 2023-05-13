@@ -1,5 +1,7 @@
 package ru.perm.v.stat.results;
 
+import java.util.Objects;
+
 public class ResultMinMaxWeight {
     Long min = 0L;
     Long max = 0L;
@@ -27,5 +29,18 @@ public class ResultMinMaxWeight {
 
     public void setMax(Long max) {
         this.max = max;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ResultMinMaxWeight that = (ResultMinMaxWeight) o;
+        return Objects.equals(min, that.min) && Objects.equals(max, that.max);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(min, max);
     }
 }
