@@ -8,11 +8,11 @@ import java.util.List;
 public class ResultDuplicates {
     List<Product> products = new ArrayList<>();
 
-    public List<Product> getProducts() {
-        return products;
+    public ResultDuplicates(List<Product> products) {
+        this.products = products;
     }
 
-    public void setProducts(List<Product> products) {
-        this.products = products;
+    public List<Product> getProducts() {
+        return products;
     }
 }

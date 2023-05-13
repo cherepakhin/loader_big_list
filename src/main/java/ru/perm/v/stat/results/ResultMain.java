@@ -1,9 +1,10 @@
 package ru.perm.v.stat.results;
 
+
 public class ResultMain {
-    ResultDuplicates resultDuplicates = new ResultDuplicates();
-    ResultMinMaxWeight resultMinMaxWeight = new ResultMinMaxWeight();
-    ResultSummaryWeight resultSummaryWeight = new ResultSummaryWeight();
+    ResultDuplicates resultDuplicates;
+    ResultMinMaxWeight resultMinMaxWeight;
+    ResultSummaryWeight resultSummaryWeight;
 
     public ResultMain(ResultDuplicates resultDuplicates, ResultMinMaxWeight resultMinMaxWeight, ResultSummaryWeight resultSummaryWeight) {
         this.resultDuplicates = resultDuplicates;
