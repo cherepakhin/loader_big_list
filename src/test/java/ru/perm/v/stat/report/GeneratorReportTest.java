@@ -1,40 +1,44 @@
 package ru.perm.v.stat.report;
 
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-import ru.perm.v.stat.report.parts.DuplicateReport;
-import ru.perm.v.stat.report.parts.MaxMinWeightReport;
-import ru.perm.v.stat.report.parts.SumWeightByGrpReport;
+import ru.perm.v.stat.Product;
 import ru.perm.v.stat.results.ResultDuplicates;
 import ru.perm.v.stat.results.ResultMain;
 import ru.perm.v.stat.results.ResultMinMaxWeight;
-import ru.perm.v.stat.results.ResultSummaryWeight;
+import ru.perm.v.stat.results.ResultSummaryWeightByGrp;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GeneratorReportTest {
 
     @Test
     void print() {
-        DuplicateReport mockDuplicateReport = mock(DuplicateReport.class);
-        SumWeightByGrpReport mockSumWeightByGrpReport = mock(SumWeightByGrpReport.class);
-        MaxMinWeightReport maxMinWeightReport = mock(MaxMinWeightReport.class);
-        ResultDuplicates mockResultDuplicates = mock(ResultDuplicates.class);
-        ResultMinMaxWeight mockResultMinMaxWeight = mock(ResultMinMaxWeight.class);
-        ResultSummaryWeight mockResultSummaryWeight = mock(ResultSummaryWeight.class);
+        Long NNUM = 10L;
+        String GRP = "GRP10";
+        String TYPE = "TYPE10";
+        Long WEIGHT = 100L;
+
+        List<Product> products = List.of(new Product(GRP, TYPE, NNUM, WEIGHT));
+        ResultDuplicates resultDuplicates = new ResultDuplicates(products);
+
+        Long MIN = 10L;
+        Long MAX = 100L;
+        ResultMinMaxWeight resultMinMaxWeight = new ResultMinMaxWeight(MIN, MAX);
+
+        Long SUMMURY = 1000L;
+        ResultSummaryWeightByGrp resultSummaryWeight = new ResultSummaryWeightByGrp(GRP, SUMMURY);
+
         ResultMain resultMain = new ResultMain(
-                mockResultDuplicates,
-                mockResultMinMaxWeight,
-                mockResultSummaryWeight);
+                resultDuplicates,
+                resultMinMaxWeight,
+                resultSummaryWeight);
 
-        GeneratorReport generatorReport = new GeneratorReport(
-                mockDuplicateReport,
-                mockSumWeightByGrpReport,
-                maxMinWeightReport);
-        generatorReport.print(resultMain);
+        GeneratorReport generatorReport = new GeneratorReport();
+        List<String> report = generatorReport.print(resultMain);
 
-        //TODO
-        //Mockito.verify(mockResultDuplicates, times(1)).getProducts();
+        assertEquals(5, report.size());
+//        assertEquals(List.of(""), report);
     }
 }

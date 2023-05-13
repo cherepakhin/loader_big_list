@@ -19,7 +19,7 @@ class ResultMainTest {
     void createDefault() {
         ResultDuplicates resultDuplicates = new ResultDuplicates(new ArrayList<>());
         ResultMinMaxWeight resultMinMaxWeight = new ResultMinMaxWeight();
-        ResultSummaryWeight resultSummaryWeight = new ResultSummaryWeight();
+        ResultSummaryWeightByGrp resultSummaryWeight = new ResultSummaryWeightByGrp();
 
         ResultMain resultMain = new ResultMain(resultDuplicates,resultMinMaxWeight,resultSummaryWeight);
 
@@ -36,7 +36,7 @@ class ResultMainTest {
         resultMinMaxWeight.setMin(MIN_WEIGHT);
         resultMinMaxWeight.setMax(MAX_WEIGHT);
 
-        ResultSummaryWeight resultSummaryWeight = new ResultSummaryWeight();
+        ResultSummaryWeightByGrp resultSummaryWeight = new ResultSummaryWeightByGrp();
         resultSummaryWeight.setSummary(SUM_WEIGHT);
 
         ResultMain resultMain = new ResultMain(resultDuplicates,resultMinMaxWeight,resultSummaryWeight);

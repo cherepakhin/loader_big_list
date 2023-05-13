@@ -6,9 +6,9 @@ import java.util.Objects;
 public class ResultMain {
     private ResultDuplicates resultDuplicates;
     private ResultMinMaxWeight resultMinMaxWeight;
-    private ResultSummaryWeight resultSummaryWeight;
+    private ResultSummaryWeightByGrp resultSummaryWeight;
 
-    public ResultMain(ResultDuplicates resultDuplicates, ResultMinMaxWeight resultMinMaxWeight, ResultSummaryWeight resultSummaryWeight) {
+    public ResultMain(ResultDuplicates resultDuplicates, ResultMinMaxWeight resultMinMaxWeight, ResultSummaryWeightByGrp resultSummaryWeight) {
         this.resultDuplicates = resultDuplicates;
         this.resultMinMaxWeight = resultMinMaxWeight;
         this.resultSummaryWeight = resultSummaryWeight;
@@ -22,7 +22,7 @@ public class ResultMain {
         return resultMinMaxWeight;
     }
 
-    public ResultSummaryWeight getResultSummaryWeight() {
+    public ResultSummaryWeightByGrp getResultSummaryWeight() {
         return resultSummaryWeight;
     }
 
