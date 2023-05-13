@@ -17,7 +17,7 @@ class ProductTest {
 
     @Test
     void customCreate() {
-        Product product = new Product("GRP","TYPE", 1L,1L);
+        Product product = new Product("GRP", "TYPE", 1L, 1L);
         assertEquals(1L, product.getNum());
         assertEquals("GRP", product.getGrp());
         assertEquals("TYPE", product.getType());

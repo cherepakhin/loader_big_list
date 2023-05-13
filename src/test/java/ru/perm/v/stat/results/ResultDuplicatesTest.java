@@ -22,7 +22,7 @@ class ResultDuplicatesTest {
         product2.setType(TYPE);
 
         Duplicate duplicate = new Duplicate(GRP, TYPE, List.of(product1, product2));
-        ResultDuplicates resultDuplicates = new ResultDuplicates(List.of(duplicate));
+        ResultGroupTypeDuplicates resultDuplicates = new ResultGroupTypeDuplicates(List.of(duplicate));
 
         // зафиксирован один двойник с 2 товарами с одинаковой группой и типом
         assertEquals(1, resultDuplicates.getDuplicates().size());

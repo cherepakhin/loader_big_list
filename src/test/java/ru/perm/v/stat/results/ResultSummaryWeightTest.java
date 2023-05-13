@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ResultSummaryWeightTest {
     @Test
     void createDefault() {
-        ResultSummaryWeightByGrp resultSummaryWeight = new ResultSummaryWeightByGrp();
+        ResultSummaryWeightByGroup resultSummaryWeight = new ResultSummaryWeightByGroup();
         assertEquals(0L, resultSummaryWeight.getSummaryWeight());
     }
 }

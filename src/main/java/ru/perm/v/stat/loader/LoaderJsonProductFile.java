@@ -25,7 +25,8 @@ public class LoaderJsonProductFile implements ILoaderProductFile {
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(DeserializationFeature.USE_JAVA_ARRAY_FOR_JSON_ARRAY, true);
         String body = FileUtils.readFileToString(new File(filePath), StandardCharsets.UTF_8);
-        List<Product> listObjForLoad = mapper.readValue(body, new TypeReference<ArrayList<Product>>() {});
+        List<Product> listObjForLoad = mapper.readValue(body, new TypeReference<ArrayList<Product>>() {
+        });
         return listObjForLoad;
     }
 }

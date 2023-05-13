@@ -4,10 +4,10 @@ import java.util.Objects;
 
 /**
  * Продукт:
- *  num = 0L -  номер
- *  grp = "" - группа
- *  type = "" - тип
- *  weight = 0L - вес
+ * num = 0L -  номер
+ * grp = "" - группа
+ * type = "" - тип
+ * weight = 0L - вес
  */
 public class Product {
     private Long num = 0L;

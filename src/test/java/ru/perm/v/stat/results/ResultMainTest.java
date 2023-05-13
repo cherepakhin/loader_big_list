@@ -17,11 +17,11 @@ class ResultMainTest {
 
     @Test
     void createDefault() {
-        ResultDuplicates resultDuplicates = new ResultDuplicates(new ArrayList<>());
+        ResultGroupTypeDuplicates resultDuplicates = new ResultGroupTypeDuplicates(new ArrayList<>());
         ResultMinMaxWeight resultMinMaxWeight = new ResultMinMaxWeight();
-        ResultSummaryWeightByGrp resultSummaryWeight = new ResultSummaryWeightByGrp();
+        ResultSummaryWeightByGroup resultSummaryWeight = new ResultSummaryWeightByGroup();
 
-        ResultMain resultMain = new ResultMain(resultDuplicates,resultMinMaxWeight,resultSummaryWeight);
+        ResultMain resultMain = new ResultMain(resultDuplicates, resultMinMaxWeight, resultSummaryWeight);
 
         assertEquals(resultDuplicates, resultMain.getResultDuplicates());
         assertEquals(resultMinMaxWeight, resultMain.getResultMinMaxWeight());
@@ -31,7 +31,7 @@ class ResultMainTest {
     @Test
     void createCustom() {
         String GRP = "GRP1";
-        String TYPE="TYPE1";
+        String TYPE = "TYPE1";
         Product product1 = new Product();
         Long NNUM1 = 1L;
         product1.setNum(NNUM1);
@@ -48,17 +48,17 @@ class ResultMainTest {
         Long WEIGHT2 = 2L;
         product2.setWeight(WEIGHT2);
 
-        Duplicate duplicate = new Duplicate(GRP,TYPE,List.of(product1,product2));
-        ResultDuplicates resultDuplicates = new ResultDuplicates(List.of(duplicate));
+        Duplicate duplicate = new Duplicate(GRP, TYPE, List.of(product1, product2));
+        ResultGroupTypeDuplicates resultDuplicates = new ResultGroupTypeDuplicates(List.of(duplicate));
 
         ResultMinMaxWeight resultMinMaxWeight = new ResultMinMaxWeight();
         resultMinMaxWeight.setMin(MIN_WEIGHT);
         resultMinMaxWeight.setMax(MAX_WEIGHT);
 
-        ResultSummaryWeightByGrp resultSummaryWeight = new ResultSummaryWeightByGrp();
+        ResultSummaryWeightByGroup resultSummaryWeight = new ResultSummaryWeightByGroup();
         resultSummaryWeight.setSummaryWeight(SUM_WEIGHT);
 
-        ResultMain resultMain = new ResultMain(resultDuplicates,resultMinMaxWeight,resultSummaryWeight);
+        ResultMain resultMain = new ResultMain(resultDuplicates, resultMinMaxWeight, resultSummaryWeight);
 
         assertEquals(resultDuplicates, resultMain.getResultDuplicates());
         assertEquals(resultMinMaxWeight, resultMain.getResultMinMaxWeight());

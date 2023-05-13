@@ -1,20 +1,20 @@
 package ru.perm.v.stat.results;
 
-
 import java.util.Objects;
 
 public class ResultMain {
-    private ResultDuplicates resultDuplicates;
+    private ResultGroupTypeDuplicates resultDuplicates;
     private ResultMinMaxWeight resultMinMaxWeight;
-    private ResultSummaryWeightByGrp resultSummaryWeight;
+    private ResultSummaryWeightByGroup resultSummaryWeight;
 
-    public ResultMain(ResultDuplicates resultDuplicates, ResultMinMaxWeight resultMinMaxWeight, ResultSummaryWeightByGrp resultSummaryWeight) {
+    public ResultMain(ResultGroupTypeDuplicates resultDuplicates, ResultMinMaxWeight resultMinMaxWeight,
+                      ResultSummaryWeightByGroup resultSummaryWeight) {
         this.resultDuplicates = resultDuplicates;
         this.resultMinMaxWeight = resultMinMaxWeight;
         this.resultSummaryWeight = resultSummaryWeight;
     }
 
-    public ResultDuplicates getResultDuplicates() {
+    public ResultGroupTypeDuplicates getResultDuplicates() {
         return resultDuplicates;
     }
 
@@ -22,7 +22,7 @@ public class ResultMain {
         return resultMinMaxWeight;
     }
 
-    public ResultSummaryWeightByGrp getResultSummaryWeight() {
+    public ResultSummaryWeightByGroup getResultSummaryWeight() {
         return resultSummaryWeight;
     }
 

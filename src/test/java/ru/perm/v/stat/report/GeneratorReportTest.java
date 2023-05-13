@@ -13,7 +13,7 @@ class GeneratorReportTest {
     @Test
     void print() {
         String GRP = "GRP1";
-        String TYPE="TYPE1";
+        String TYPE = "TYPE1";
         Product product1 = new Product();
         Long NNUM1 = 1L;
         product1.setNum(NNUM1);
@@ -30,16 +30,16 @@ class GeneratorReportTest {
         Long WEIGHT2 = 2L;
         product2.setWeight(WEIGHT2);
 
-        Duplicate duplicate = new Duplicate(GRP,TYPE,List.of(product1,product2));
+        Duplicate duplicate = new Duplicate(GRP, TYPE, List.of(product1, product2));
 
-        ResultDuplicates resultDuplicates = new ResultDuplicates(List.of(duplicate));
+        ResultGroupTypeDuplicates resultDuplicates = new ResultGroupTypeDuplicates(List.of(duplicate));
 
         Long MIN = 10L;
         Long MAX = 100L;
         ResultMinMaxWeight resultMinMaxWeight = new ResultMinMaxWeight(MIN, MAX);
 
         Long SUMMURY = 1000L;
-        ResultSummaryWeightByGrp resultSummaryWeight = new ResultSummaryWeightByGrp(GRP, SUMMURY);
+        ResultSummaryWeightByGroup resultSummaryWeight = new ResultSummaryWeightByGroup(GRP, SUMMURY);
 
         ResultMain resultMain = new ResultMain(
                 resultDuplicates,
