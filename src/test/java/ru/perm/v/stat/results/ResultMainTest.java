@@ -56,13 +56,13 @@ class ResultMainTest {
         resultMinMaxWeight.setMax(MAX_WEIGHT);
 
         ResultSummaryWeightByGrp resultSummaryWeight = new ResultSummaryWeightByGrp();
-        resultSummaryWeight.setSummary(SUM_WEIGHT);
+        resultSummaryWeight.setSummaryWeight(SUM_WEIGHT);
 
         ResultMain resultMain = new ResultMain(resultDuplicates,resultMinMaxWeight,resultSummaryWeight);
 
         assertEquals(resultDuplicates, resultMain.getResultDuplicates());
         assertEquals(resultMinMaxWeight, resultMain.getResultMinMaxWeight());
         assertEquals(resultSummaryWeight, resultMain.getResultSummaryWeight());
-        assertEquals(SUM_WEIGHT, resultMain.getResultSummaryWeight().getSummary());
+        assertEquals(SUM_WEIGHT, resultMain.getResultSummaryWeight().getSummaryWeight());
     }
 }

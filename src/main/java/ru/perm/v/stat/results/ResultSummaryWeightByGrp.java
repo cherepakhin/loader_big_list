@@ -4,15 +4,15 @@ import java.util.Objects;
 
 public class ResultSummaryWeightByGrp {
     private String grp = "";
-    private Long summary = 0L;
+    private Long summaryWeight = 0L;
 
     public ResultSummaryWeightByGrp() {
     }
 
-    public ResultSummaryWeightByGrp(String grp, Long summary) {
+    public ResultSummaryWeightByGrp(String grp, Long summaryWeight) {
         this();
         this.grp = grp;
-        this.summary = summary;
+        this.summaryWeight = summaryWeight;
     }
 
     public String getGrp() {
@@ -23,12 +23,12 @@ public class ResultSummaryWeightByGrp {
         this.grp = grp;
     }
 
-    public Long getSummary() {
-        return summary;
+    public Long getSummaryWeight() {
+        return summaryWeight;
     }
 
-    public void setSummary(Long summary) {
-        this.summary = summary;
+    public void setSummaryWeight(Long summaryWeight) {
+        this.summaryWeight = summaryWeight;
     }
 
     @Override
@@ -36,11 +36,11 @@ public class ResultSummaryWeightByGrp {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ResultSummaryWeightByGrp that = (ResultSummaryWeightByGrp) o;
-        return Objects.equals(grp, that.grp) && Objects.equals(summary, that.summary);
+        return Objects.equals(grp, that.grp) && Objects.equals(summaryWeight, that.summaryWeight);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(grp, summary);
+        return Objects.hash(grp, summaryWeight);
     }
 }

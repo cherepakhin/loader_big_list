@@ -8,6 +8,6 @@ class ResultSummaryWeightTest {
     @Test
     void createDefault() {
         ResultSummaryWeightByGrp resultSummaryWeight = new ResultSummaryWeightByGrp();
-        assertEquals(0L, resultSummaryWeight.getSummary());
+        assertEquals(0L, resultSummaryWeight.getSummaryWeight());
     }
 }
