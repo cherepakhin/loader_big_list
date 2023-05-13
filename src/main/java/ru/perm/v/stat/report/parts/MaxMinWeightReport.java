@@ -2,11 +2,12 @@ package ru.perm.v.stat.report.parts;
 
 import ru.perm.v.stat.results.ResultMinMaxWeight;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MaxMinWeightReport implements IPrintReport {
 
-    private ResultMinMaxWeight resultMinMaxWeight;
+    private final ResultMinMaxWeight resultMinMaxWeight;
 
     public MaxMinWeightReport(ResultMinMaxWeight resultMinMaxWeight) {
         this.resultMinMaxWeight = resultMinMaxWeight;
@@ -14,8 +15,10 @@ public class MaxMinWeightReport implements IPrintReport {
 
     @Override
     public List<String> getBody() {
-        String body = String.format("Result min = %s max = %s",
-                resultMinMaxWeight.getMin(), resultMinMaxWeight.getMax());
-        return List.of(body);
+        List<String> body = new ArrayList<>();
+        body.add("MaxMinWeight:\n");
+        body.add(String.format("Result min = %s max = %s\n",
+                resultMinMaxWeight.getMin(), resultMinMaxWeight.getMax()));
+        return body;
     }
 }
