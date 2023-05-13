@@ -4,7 +4,7 @@ import ru.perm.v.stat.results.ResultMinMaxWeight;
 
 import java.util.List;
 
-public class SumWeightByGrpReport implements IPrintReport{
+public class SumWeightByGrpReport implements IPrintReport {
 
     private final ResultMinMaxWeight resultMinMaxWeight;
 
@@ -14,7 +14,8 @@ public class SumWeightByGrpReport implements IPrintReport{
 
     @Override
     public List<String> getBody() {
-        String body = String.format("Weight min=%s, max=%s",resultMinMaxWeight.getMin(), resultMinMaxWeight.getMax());
+        String body = String.format("Weight min=%s, Weightmax=%s",
+                resultMinMaxWeight.getMin(), resultMinMaxWeight.getMax());
         return List.of(body);
     }
 }
