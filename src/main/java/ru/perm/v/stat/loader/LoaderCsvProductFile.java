@@ -19,7 +19,7 @@ public class LoaderCsvProductFile implements ILoaderProductFile {
     /**
      * Загрузить данные из файла CSV
      *
-     * @return список данных Stat
+     * @return список продуктов
      * @throws Exception файл не найден
      */
     public List<Product> read(String filePath) throws IOException {
