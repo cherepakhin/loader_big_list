@@ -9,8 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GeneratorReport {
+    ResultMain resultMain;
 
-    public List<String> print(ResultMain resultMain) {
+    public GeneratorReport(ResultMain resultMain) {
+        this.resultMain = resultMain;
+    }
+
+    public List<String> print() {
         List<String> mainReport = new ArrayList<>();
         mainReport.addAll(new DuplicateReport(resultMain.getResultDuplicates()).getBody());
         mainReport.addAll(new SumWeightByGrpReport(resultMain.getResultSummaryWeight()).getBody());

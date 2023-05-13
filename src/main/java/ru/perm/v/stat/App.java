@@ -34,7 +34,7 @@ public class App {
                 //analize
 
                 //generate report
-                GeneratorReport generatorReport = new GeneratorReport();
+//                GeneratorReport generatorReport = new GeneratorReport();
 
                 long timeElapsed = System.currentTimeMillis() - startTime;
                 // write result to file

@@ -46,9 +46,8 @@ class GeneratorReportTest {
                 resultMinMaxWeight,
                 resultSummaryWeight);
 
-        GeneratorReport generatorReport = new GeneratorReport();
-        List<String> report = generatorReport.print(resultMain);
-        System.out.println(report);
+        GeneratorReport generatorReport = new GeneratorReport(resultMain);
+        List<String> report = generatorReport.print();
 
         assertEquals(9, report.size());
     }
