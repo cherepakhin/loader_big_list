@@ -5,7 +5,7 @@ import ru.perm.v.stat.results.ResultDuplicates;
 import java.util.List;
 
 public class DuplicateReport implements IPrintReport {
-    private ResultDuplicates resultDuplicates;
+    private final ResultDuplicates resultDuplicates;
     public DuplicateReport(ResultDuplicates resultDuplicates) {
         this.resultDuplicates = resultDuplicates;
     }

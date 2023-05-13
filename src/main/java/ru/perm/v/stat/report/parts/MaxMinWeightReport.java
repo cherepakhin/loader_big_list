@@ -14,7 +14,7 @@ public class MaxMinWeightReport implements IPrintReport {
 
     @Override
     public List<String> getBody() {
-        String body = String.format("Result min = %s max = %s ",
+        String body = String.format("Result min = %s max = %s",
                 resultMinMaxWeight.getMin(), resultMinMaxWeight.getMax());
         return List.of(body);
     }

@@ -10,9 +10,9 @@ import java.util.List;
 
 public class GeneratorReport {
 
-    private DuplicateReport duplicateReport;
-    private SumWeightByGrpReport sumWeightByGrpReport;
-    private MaxMinWeightReport maxMinWeightReport;
+    private final DuplicateReport duplicateReport;
+    private final SumWeightByGrpReport sumWeightByGrpReport;
+    private final MaxMinWeightReport maxMinWeightReport;
 
     public GeneratorReport(DuplicateReport duplicateReport, SumWeightByGrpReport sumWeightByGrpReport, MaxMinWeightReport maxMinWeightReport) {
         this.duplicateReport = duplicateReport;
