@@ -19,6 +19,6 @@ class SumWeightByGrpReportTest {
         resultSummaryWeightByGrp.setSummary(SUMMARY);
         SumWeightByGrpReport sumWeightByGrpReport = new SumWeightByGrpReport(resultSummaryWeightByGrp);
 
-        assertEquals(List.of("Summary group=GRP, weight=100"), sumWeightByGrpReport.getBody());
+        assertEquals(List.of("Summary group=GRP, weight=100\n"), sumWeightByGrpReport.getBody());
     }
 }

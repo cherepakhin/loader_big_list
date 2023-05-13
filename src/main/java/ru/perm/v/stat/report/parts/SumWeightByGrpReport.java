@@ -15,7 +15,7 @@ public class SumWeightByGrpReport implements IPrintReport {
 
     @Override
     public List<String> getBody() {
-        String body = String.format("Summary group=%s, weight=%s",
+        String body = String.format("Summary group=%s, weight=%s\n",
                 summaryWeightByGrp.getGrp(), summaryWeightByGrp.getSummary());
         return List.of(body);
     }
