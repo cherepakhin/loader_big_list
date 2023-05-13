@@ -32,6 +32,7 @@ class ResultDuplicatesTest {
         Duplicate duplicate = new Duplicate(GRP,TYPE,List.of(product1,product2));
         ResultDuplicates resultDuplicates = new ResultDuplicates(List.of(duplicate));
 
+        // зафиксирован один двойник с 2 товарами с одинаковой группой и типом
         assertEquals(1, resultDuplicates.getDuplicates().size());
         assertEquals(product1, resultDuplicates.getDuplicates().get(0).getProducts().get(0));
         assertEquals(product2, resultDuplicates.getDuplicates().get(0).getProducts().get(1));
