@@ -29,8 +29,12 @@ public class App {
             try {
                 long startTime = System.currentTimeMillis();
 
-                // process
+                // load products from file
                 List<Product> stat = loaderStat.readFromFile(file);
+                //analize
+
+                //generate report
+                GeneratorReport generatorReport = new GeneratorReport();
 
                 long timeElapsed = System.currentTimeMillis() - startTime;
                 // write result to file

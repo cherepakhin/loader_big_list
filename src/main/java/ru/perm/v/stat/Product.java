@@ -1,5 +1,7 @@
 package ru.perm.v.stat;
 
+import java.util.Objects;
+
 /**
  * Продукт:
  *  num = 0L -  номер
@@ -68,8 +70,7 @@ public class Product {
 
     @Override
     public int hashCode() {
-        return 1;
-//        return Objects.hash(grp, type, num, weight);
+        return Objects.hash(grp, type, num, weight);
     }
 
     @Override
