@@ -20,7 +20,6 @@ class ProductsStatisticsTest {
         Product product = new Product(GRP,TYPE,NUM, WEIGHT);
         List<Product> products = List.of(product);
         ProductsStatistics productsStatistics = new ProductsStatistics(products);
-        ResultDuplicates duplicates = productsStatistics.getDuplicates();
-        assertEquals(products, duplicates.getProducts());
+        assertEquals(products, productsStatistics.getDuplicates().getProducts());
     }
 }

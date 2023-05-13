@@ -17,8 +17,8 @@ public class ProductsStatistics {
 
     public ResultMain getResultMain() {
         ResultDuplicates resultDuplicates = getDuplicates();
-        ResultMinMaxWeight resultMinMaxWeight  = getResultMinMaxWeight();
         ResultSummaryWeightByGrp resultSummaryWeight  = getResultSummaryWeightByGrp();
+        ResultMinMaxWeight resultMinMaxWeight  = getResultMinMaxWeight();
         return new ResultMain(resultDuplicates, resultMinMaxWeight, resultSummaryWeight);
     }
 
