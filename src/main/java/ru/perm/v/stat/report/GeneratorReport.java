@@ -15,7 +15,7 @@ public class GeneratorReport {
         this.resultMain = resultMain;
     }
 
-    public List<String> print() {
+    public List<String> getReportStrings() {
         List<String> mainReport = new ArrayList<>();
         mainReport.addAll(new DuplicateReport(resultMain.getResultDuplicates()).getBody());
         mainReport.addAll(new SumWeightByGrpReport(resultMain.getResultSummaryWeight()).getBody());
