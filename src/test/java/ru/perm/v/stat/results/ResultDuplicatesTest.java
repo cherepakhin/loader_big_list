@@ -11,8 +11,16 @@ class ResultDuplicatesTest {
 
     @Test
     void getProducts() {
-        List<Product> products = List.of(new Product());
+        Product product1 = new Product();
+        product1.setNum(1L);
+        Product product2 = new Product();
+        product2.setNum(2L);
+        List<Product> products = List.of(product1, product2);
+
         ResultDuplicates resultDuplicates = new ResultDuplicates(products);
-        assertEquals(1, resultDuplicates.getProducts().size());
+
+        assertEquals(2, resultDuplicates.getProducts().size());
+        assertEquals(product1, resultDuplicates.getProducts().get(0));
+        assertEquals(product2, resultDuplicates.getProducts().get(1));
     }
 }
