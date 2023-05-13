@@ -50,6 +50,6 @@ class GeneratorReportTest {
         List<String> report = generatorReport.print(resultMain);
         System.out.println(report);
 
-        assertEquals(7, report.size());
+        assertEquals(9, report.size());
     }
 }
