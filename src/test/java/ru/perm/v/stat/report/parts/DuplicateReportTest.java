@@ -37,9 +37,10 @@ class DuplicateReportTest {
         DuplicateReport duplicateReport = new DuplicateReport(resultDuplicates);
         List<String> body = duplicateReport.getBody();
 
-        assertEquals(3, body.size()); // Add title
-        assertEquals("Duplicate:\n", body.get(0));
-        assertEquals("Product: grp=GRP1, nnum=1, type=TYPE1, weight=1\n", body.get(1));
-        assertEquals("Product: grp=GRP2, nnum=2, type=TYPE2, weight=2\n", body.get(2));
+        assertEquals(4, body.size()); // Add title
+        assertEquals("Duplicates:\n", body.get(0));
+        assertEquals("Duplicates by Group: GRP1 and Type: TYPE1\n", body.get(1));
+        assertEquals("Product: grp=GRP1, nnum=1, type=TYPE1, weight=1\n", body.get(2));
+        assertEquals("Product: grp=GRP1, nnum=2, type=TYPE1, weight=2\n", body.get(3));
     }
 }
