@@ -2,10 +2,7 @@ package ru.perm.v.stat.report;
 
 import org.junit.jupiter.api.Test;
 import ru.perm.v.stat.Product;
-import ru.perm.v.stat.results.ResultDuplicates;
-import ru.perm.v.stat.results.ResultMain;
-import ru.perm.v.stat.results.ResultMinMaxWeight;
-import ru.perm.v.stat.results.ResultSummaryWeightByGrp;
+import ru.perm.v.stat.results.*;
 
 import java.util.List;
 
@@ -15,13 +12,27 @@ class GeneratorReportTest {
 
     @Test
     void print() {
-        Long NNUM = 10L;
-        String GRP = "GRP10";
-        String TYPE = "TYPE10";
-        Long WEIGHT = 100L;
+        String GRP = "GRP1";
+        String TYPE="TYPE1";
+        Product product1 = new Product();
+        Long NNUM1 = 1L;
+        product1.setNum(NNUM1);
+        product1.setGrp(GRP);
+        product1.setType(TYPE);
+        Long WEIGHT1 = 1L;
+        product1.setWeight(WEIGHT1);
 
-        List<Product> products = List.of(new Product(GRP, TYPE, NNUM, WEIGHT));
-        ResultDuplicates resultDuplicates = new ResultDuplicates(products);
+        Product product2 = new Product();
+        Long NNUM2 = 2L;
+        product2.setNum(NNUM2);
+        product2.setGrp(GRP);
+        product2.setType(TYPE);
+        Long WEIGHT2 = 2L;
+        product2.setWeight(WEIGHT2);
+
+        Duplicate duplicate = new Duplicate(GRP,TYPE,List.of(product1,product2));
+
+        ResultDuplicates resultDuplicates = new ResultDuplicates(List.of(duplicate));
 
         Long MIN = 10L;
         Long MAX = 100L;

@@ -7,14 +7,14 @@ import java.util.List;
 import java.util.Objects;
 
 public class ResultDuplicates {
-    private List<Product> products = new ArrayList<>();
+    private List<Duplicate> duplicates = new ArrayList<>();
 
-    public ResultDuplicates(List<Product> products) {
-        this.products = products;
+    public ResultDuplicates(List<Duplicate> duplicates) {
+        this.duplicates = duplicates;
     }
 
-    public List<Product> getProducts() {
-        return products;
+    public List<Duplicate> getDuplicates() {
+        return duplicates;
     }
 
     @Override
@@ -22,11 +22,11 @@ public class ResultDuplicates {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ResultDuplicates that = (ResultDuplicates) o;
-        return Objects.equals(products, that.products);
+        return Objects.equals(duplicates, that.duplicates);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(products);
+        return Objects.hash(duplicates);
     }
 }

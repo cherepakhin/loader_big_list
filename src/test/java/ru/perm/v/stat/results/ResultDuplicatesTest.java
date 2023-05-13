@@ -11,16 +11,29 @@ class ResultDuplicatesTest {
 
     @Test
     void getProducts() {
+        String GRP = "GRP1";
+        String TYPE="TYPE1";
         Product product1 = new Product();
-        product1.setNum(1L);
+        Long NNUM1 = 1L;
+        product1.setNum(NNUM1);
+        product1.setGrp(GRP);
+        product1.setType(TYPE);
+        Long WEIGHT1 = 1L;
+        product1.setWeight(WEIGHT1);
+
         Product product2 = new Product();
-        product2.setNum(2L);
-        List<Product> products = List.of(product1, product2);
+        Long NNUM2 = 2L;
+        product2.setNum(NNUM2);
+        product2.setGrp(GRP);
+        product2.setType(TYPE);
+        Long WEIGHT2 = 2L;
+        product2.setWeight(WEIGHT2);
 
-        ResultDuplicates resultDuplicates = new ResultDuplicates(products);
+        Duplicate duplicate = new Duplicate(GRP,TYPE,List.of(product1,product2));
+        ResultDuplicates resultDuplicates = new ResultDuplicates(List.of(duplicate));
 
-        assertEquals(2, resultDuplicates.getProducts().size());
-        assertEquals(product1, resultDuplicates.getProducts().get(0));
-        assertEquals(product2, resultDuplicates.getProducts().get(1));
+        assertEquals(1, resultDuplicates.getDuplicates().size());
+        assertEquals(product1, resultDuplicates.getDuplicates().get(0).getProducts().get(0));
+        assertEquals(product2, resultDuplicates.getDuplicates().get(0).getProducts().get(1));
     }
 }
