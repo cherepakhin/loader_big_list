@@ -1,9 +1,16 @@
 package ru.perm.v.stat;
 
+/**
+ * Продукт:
+ *  num = 0L -  номер
+ *  grp = "" - группа
+ *  type  = "" - тип
+ *  weight - вес
+ */
 public class Product {
+    private Long num = 0L;
     private String grp = "";
     private String type = "";
-    private Long num = 0L;
     private Long weight = 0L;
 
     public Product() {
