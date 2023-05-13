@@ -39,8 +39,8 @@ class DuplicateReportTest {
 
         assertEquals(3, body.size()); // Add title
         assertEquals("Duplicate:\n", body.get(0));
-        assertEquals("Product: grp=GRP1, nnum=1, type=TYPE1, weight=1", body.get(1));
-        assertEquals("Product: grp=GRP2, nnum=2, type=TYPE2, weight=2", body.get(2));
+        assertEquals("Product: grp=GRP1, nnum=1, type=TYPE1, weight=1\n", body.get(1));
+        assertEquals("Product: grp=GRP2, nnum=2, type=TYPE2, weight=2\n", body.get(2));
     }
 
 }

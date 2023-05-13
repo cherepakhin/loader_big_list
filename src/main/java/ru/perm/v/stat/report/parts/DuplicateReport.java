@@ -18,7 +18,7 @@ public class DuplicateReport implements IPrintReport {
         List<String> body = new ArrayList<>();
         body.add("Duplicate:\n");
         for (Product product : resultDuplicates.getProducts()) {
-            body.add(String.format("Product: grp=%s, nnum=%s, type=%s, weight=%s",
+            body.add(String.format("Product: grp=%s, nnum=%s, type=%s, weight=%s\n",
                     product.getGrp(), product.getNum(), product.getType(), product.getWeight()));
         }
         return body;
