@@ -14,7 +14,7 @@ class SumWeightByGrpReportTest {
         ResultMinMaxWeight resultMinMaxWeight = new ResultMinMaxWeight();
         SumWeightByGrpReport sumWeightByGrpReport = new SumWeightByGrpReport(resultMinMaxWeight);
 
-        assertEquals(List.of("Weght min=0, max=0"), sumWeightByGrpReport.getBody());
+        assertEquals(List.of("Weight min=0, max=0"), sumWeightByGrpReport.getBody());
     }
 
     @Test
@@ -24,6 +24,6 @@ class SumWeightByGrpReportTest {
         resultMinMaxWeight.setMax(100L);
         SumWeightByGrpReport sumWeightByGrpReport = new SumWeightByGrpReport(resultMinMaxWeight);
 
-        assertEquals(List.of("Weght min=10, max=100"), sumWeightByGrpReport.getBody());
+        assertEquals(List.of("Weight min=10, max=100"), sumWeightByGrpReport.getBody());
     }
 }

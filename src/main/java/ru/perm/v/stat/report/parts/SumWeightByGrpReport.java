@@ -14,7 +14,7 @@ public class SumWeightByGrpReport implements IPrintReport{
 
     @Override
     public List<String> getBody() {
-        String body = String.format("Weght min=%s, max=%s",resultMinMaxWeight.getMin(), resultMinMaxWeight.getMax());
+        String body = String.format("Weight min=%s, max=%s",resultMinMaxWeight.getMin(), resultMinMaxWeight.getMax());
         return List.of(body);
     }
 }
