@@ -30,17 +30,16 @@ public class LoaderCsvProductFile implements ILoaderProductFile {
             String[] values = line.split(COMMA_DELIMITER);
             records.add(Arrays.asList(values));
         }
-        records.remove(0); // Удаление заголовка
-        List<Product> stats = new ArrayList<>();
+        records.remove(0); // Удаление заголовка CSV
+        List<Product> products = new ArrayList<>();
         for (List<String> row : records) {
-            Product stat = new Product();
-
-            stat.setGrp(row.get(0));
-            stat.setType(row.get(1));
-            stat.setNum(Long.parseLong(row.get(2)));
-            stat.setWeight(Long.parseLong(row.get(3)));
-            stats.add(stat);
+            Product product = new Product();
+            product.setGrp(row.get(0));
+            product.setType(row.get(1));
+            product.setNum(Long.parseLong(row.get(2)));
+            product.setWeight(Long.parseLong(row.get(3)));
+            products.add(product);
         }
-        return stats;
+        return products;
     }
 }
