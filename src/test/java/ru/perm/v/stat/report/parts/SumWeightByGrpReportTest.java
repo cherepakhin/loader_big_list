@@ -1,29 +1,24 @@
 package ru.perm.v.stat.report.parts;
 
 import org.junit.jupiter.api.Test;
-import ru.perm.v.stat.results.ResultMinMaxWeight;
+import ru.perm.v.stat.results.ResultSummaryWeightByGrp;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SumWeightByGrpReportTest {
 
     @Test
     void getBodyByDefault() {
-        ResultMinMaxWeight resultMinMaxWeight = new ResultMinMaxWeight();
-        SumWeightByGrpReport sumWeightByGrpReport = new SumWeightByGrpReport(resultMinMaxWeight);
+        ResultSummaryWeightByGrp resultSummaryWeightByGrp = new ResultSummaryWeightByGrp();
+        String GRP = "GRP";
+        resultSummaryWeightByGrp.setGrp(GRP);
 
-        assertEquals(List.of("Weight min=0, max=0"), sumWeightByGrpReport.getBody());
-    }
+        Long SUMMARY = 100L;
+        resultSummaryWeightByGrp.setSummary(SUMMARY);
+        SumWeightByGrpReport sumWeightByGrpReport = new SumWeightByGrpReport(resultSummaryWeightByGrp);
 
-    @Test
-    void getBodyWithValues() {
-        ResultMinMaxWeight resultMinMaxWeight = new ResultMinMaxWeight();
-        resultMinMaxWeight.setMin(10L);
-        resultMinMaxWeight.setMax(100L);
-        SumWeightByGrpReport sumWeightByGrpReport = new SumWeightByGrpReport(resultMinMaxWeight);
-
-        assertEquals(List.of("Weight min=10, max=100"), sumWeightByGrpReport.getBody());
+        assertEquals(List.of("Summary group=GRP, weight=100"), sumWeightByGrpReport.getBody());
     }
 }

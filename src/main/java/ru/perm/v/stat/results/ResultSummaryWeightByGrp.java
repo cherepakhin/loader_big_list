@@ -15,6 +15,14 @@ public class ResultSummaryWeightByGrp {
         this.summary = summary;
     }
 
+    public String getGrp() {
+        return grp;
+    }
+
+    public void setGrp(String grp) {
+        this.grp = grp;
+    }
+
     public Long getSummary() {
         return summary;
     }

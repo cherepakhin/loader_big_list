@@ -13,7 +13,7 @@ public class GeneratorReport {
     public List<String> print(ResultMain resultMain) {
         List<String> mainReport = new ArrayList<>();
         mainReport.addAll(new DuplicateReport(resultMain.getResultDuplicates()).getBody());
-        mainReport.addAll(new SumWeightByGrpReport(resultMain.getResultMinMaxWeight()).getBody());
+        mainReport.addAll(new SumWeightByGrpReport(resultMain.getResultSummaryWeight()).getBody());
         mainReport.addAll(new MaxMinWeightReport(resultMain.getResultMinMaxWeight()).getBody());
         return mainReport;
     }
