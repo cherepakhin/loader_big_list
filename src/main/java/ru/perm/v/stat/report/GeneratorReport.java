@@ -10,6 +10,16 @@ import java.util.List;
 
 public class GeneratorReport {
 
+    DuplicateReport duplicateReport;
+    SumWeightByGrpReport sumWeightByGrpReport;
+    MaxMinWeightReport maxMinWeightReport;
+
+    public GeneratorReport(DuplicateReport duplicateReport, SumWeightByGrpReport sumWeightByGrpReport, MaxMinWeightReport maxMinWeightReport) {
+        this.duplicateReport = duplicateReport;
+        this.sumWeightByGrpReport = sumWeightByGrpReport;
+        this.maxMinWeightReport = maxMinWeightReport;
+    }
+
     public List<String> print(ResultMain resultMain) {
         List<String> mainReport = new ArrayList<>();
         mainReport.addAll(new DuplicateReport(resultMain.getResultDuplicates()).getBody());

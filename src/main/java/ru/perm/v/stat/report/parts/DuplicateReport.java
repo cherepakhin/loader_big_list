@@ -14,4 +14,5 @@ public class DuplicateReport implements IPrintReport {
     public List<String> getBody() {
         return List.of("");
     }
+
 }
