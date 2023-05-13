@@ -3,8 +3,8 @@ package ru.perm.v.stat.results;
 import java.util.Objects;
 
 public class ResultMinMaxWeight {
-    Long min = 0L;
-    Long max = 0L;
+    private Long min = 0L;
+    private Long max = 0L;
 
     public ResultMinMaxWeight() {
     }

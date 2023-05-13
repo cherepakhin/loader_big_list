@@ -4,9 +4,9 @@ package ru.perm.v.stat.results;
 import java.util.Objects;
 
 public class ResultMain {
-    ResultDuplicates resultDuplicates;
-    ResultMinMaxWeight resultMinMaxWeight;
-    ResultSummaryWeight resultSummaryWeight;
+    private ResultDuplicates resultDuplicates;
+    private ResultMinMaxWeight resultMinMaxWeight;
+    private ResultSummaryWeight resultSummaryWeight;
 
     public ResultMain(ResultDuplicates resultDuplicates, ResultMinMaxWeight resultMinMaxWeight, ResultSummaryWeight resultSummaryWeight) {
         this.resultDuplicates = resultDuplicates;

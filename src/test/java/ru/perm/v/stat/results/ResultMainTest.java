@@ -30,8 +30,7 @@ class ResultMainTest {
 
     @Test
     void createCustom() {
-        ResultDuplicates resultDuplicates = new ResultDuplicates(new ArrayList<>());
-        resultDuplicates.products = List.of(new Product());
+        ResultDuplicates resultDuplicates = new ResultDuplicates(List.of(new Product()));
 
         ResultMinMaxWeight resultMinMaxWeight = new ResultMinMaxWeight();
         resultMinMaxWeight.setMin(MIN_WEIGHT);
@@ -45,5 +44,6 @@ class ResultMainTest {
         assertEquals(resultDuplicates, resultMain.getResultDuplicates());
         assertEquals(resultMinMaxWeight, resultMain.getResultMinMaxWeight());
         assertEquals(resultSummaryWeight, resultMain.getResultSummaryWeight());
+        assertEquals(SUM_WEIGHT, resultMain.getResultSummaryWeight().getSummary());
     }
 }

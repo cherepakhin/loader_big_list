@@ -3,7 +3,7 @@ package ru.perm.v.stat.results;
 import java.util.Objects;
 
 public class ResultSummaryWeight {
-    Long summary = 0L;
+    private Long summary = 0L;
 
     public Long getSummary() {
         return summary;

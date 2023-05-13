@@ -6,7 +6,10 @@ import java.util.List;
 
 public class SumWeightByGrpReport implements IPrintReport{
 
+    private final ResultMinMaxWeight resultMinMaxWeight;
+
     public SumWeightByGrpReport(ResultMinMaxWeight resultMinMaxWeight) {
+        this.resultMinMaxWeight = resultMinMaxWeight;
     }
 
     @Override

@@ -6,7 +6,7 @@ import java.util.List;
 
 public class MaxMinWeightReport implements IPrintReport {
 
-    ResultMinMaxWeight resultMinMaxWeight;
+    private ResultMinMaxWeight resultMinMaxWeight;
 
     public MaxMinWeightReport(ResultMinMaxWeight resultMinMaxWeight) {
         this.resultMinMaxWeight = resultMinMaxWeight;

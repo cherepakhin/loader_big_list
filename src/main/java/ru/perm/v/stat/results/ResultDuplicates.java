@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class ResultDuplicates {
-    List<Product> products = new ArrayList<>();
+    private List<Product> products = new ArrayList<>();
 
     public ResultDuplicates(List<Product> products) {
         this.products = products;
