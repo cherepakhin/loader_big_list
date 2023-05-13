@@ -36,7 +36,7 @@ class DuplicateReportTest {
 
         DuplicateReport duplicateReport = new DuplicateReport(resultDuplicates);
         List<String> body = duplicateReport.getBody();
-        System.out.println(body);
+//        System.out.println(body);
         assertEquals(6, body.size()); // Add title
         assertEquals("==================Duplicates==================\n", body.get(0));
         assertEquals("Duplicates by Group: GRP1 and Type: TYPE1\n", body.get(1));
