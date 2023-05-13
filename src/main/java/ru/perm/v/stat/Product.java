@@ -4,8 +4,8 @@ package ru.perm.v.stat;
  * Продукт:
  *  num = 0L -  номер
  *  grp = "" - группа
- *  type  = "" - тип
- *  weight - вес
+ *  type = "" - тип
+ *  weight = 0L - вес
  */
 public class Product {
     private Long num = 0L;
