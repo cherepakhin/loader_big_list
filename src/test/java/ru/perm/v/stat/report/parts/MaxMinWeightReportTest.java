@@ -18,6 +18,6 @@ class MaxMinWeightReportTest {
         MaxMinWeightReport maxMinWeightReport = new MaxMinWeightReport(resultMinMaxWeight);
         List<String> body = maxMinWeightReport.getBody();
         assertEquals("MaxMinWeight:\n", body.get(0));
-        assertEquals("Result min = 10 max = 100\n", body.get(1));
+        assertEquals("min = 10 max = 100\n", body.get(1));
     }
 }

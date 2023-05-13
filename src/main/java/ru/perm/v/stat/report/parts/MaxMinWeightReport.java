@@ -17,7 +17,7 @@ public class MaxMinWeightReport implements IPrintReport {
     public List<String> getBody() {
         List<String> body = new ArrayList<>();
         body.add("MaxMinWeight:\n");
-        body.add(String.format("Result min = %s max = %s\n",
+        body.add(String.format("min = %s max = %s\n",
                 resultMinMaxWeight.getMin(), resultMinMaxWeight.getMax()));
         return body;
     }
