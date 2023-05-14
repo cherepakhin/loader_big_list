@@ -3,7 +3,6 @@ package ru.perm.v.stat;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.FileUtils;
 import ru.perm.v.stat.loader.LoaderProduct;
-import ru.perm.v.stat.report.GeneratorReport;
 
 import java.io.File;
 import java.io.IOException;
@@ -30,7 +29,7 @@ public class App {
                 long startTime = System.currentTimeMillis();
 
                 // load products from file
-                List<Product> stat = loaderStat.readFromFile(file);
+                List<Product> products = loaderStat.readFromFile(file);
                 //analize
 
                 //generate report
@@ -38,7 +37,9 @@ public class App {
 
                 long timeElapsed = System.currentTimeMillis() - startTime;
                 // write result to file
-                FileUtils.writeStringToFile(new File("result.txt"), mapper.writerWithDefaultPrettyPrinter().writeValueAsString(stat), Charset.defaultCharset());
+                FileUtils.writeStringToFile(new File("result.txt"),
+                        mapper.writerWithDefaultPrettyPrinter().writeValueAsString(products),
+                        Charset.defaultCharset());
                 // print time
                 System.out.printf("Writed to file \"result.txt\". Time elapsed: %s ms\n", timeElapsed);
             } catch (Exception e) {
