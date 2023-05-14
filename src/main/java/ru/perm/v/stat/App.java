@@ -13,6 +13,7 @@ import java.util.Scanner;
 import static java.lang.System.exit;
 
 public class App {
+    private static String resultsFile = "result.json";
 
     public static void main(String[] args) throws IOException {
         Scanner in = new Scanner(System.in);
@@ -37,11 +38,11 @@ public class App {
 
                 long timeElapsed = System.currentTimeMillis() - startTime;
                 // write result to file
-                FileUtils.writeStringToFile(new File("result.txt"),
+                FileUtils.writeStringToFile(new File(resultsFile),
                         mapper.writerWithDefaultPrettyPrinter().writeValueAsString(products),
                         Charset.defaultCharset());
                 // print time
-                System.out.printf("Writed to file \"result.txt\". Time elapsed: %s ms\n", timeElapsed);
+                System.out.printf("Writed to file \"result.json\". Time elapsed: %s ms\n", timeElapsed);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
