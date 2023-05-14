@@ -36,6 +36,7 @@ public class LoaderProduct {
         }
         String extension = FilenameUtils.getExtension(filePath); // json, csv
         if (mapLoaderByExtension.containsKey(extension)) {
+            //TODO Памяти мало. Грузить порциями
             return mapLoaderByExtension.get(extension).read(filePath);
         }
         throw new Exception("File extension not recognized");

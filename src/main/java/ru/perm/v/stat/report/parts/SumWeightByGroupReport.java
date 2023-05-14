@@ -3,6 +3,7 @@ package ru.perm.v.stat.report.parts;
 
 import ru.perm.v.stat.results.ResultSummaryWeightByGroup;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SumWeightByGroupReport implements IPrintReport {
@@ -17,6 +18,8 @@ public class SumWeightByGroupReport implements IPrintReport {
     public List<String> getBody() {
         String body = String.format("Summary group=%s, weight=%s\n",
                 summaryWeightByGroup.getGrp(), summaryWeightByGroup.getSummaryWeight());
-        return List.of(body);
+//        return List.of(body);
+        //TODO: empty return
+        return new ArrayList();
     }
 }

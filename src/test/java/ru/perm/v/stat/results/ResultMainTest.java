@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 import ru.perm.v.stat.Product;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 class ResultMainTest {
@@ -48,8 +48,8 @@ class ResultMainTest {
         Long WEIGHT2 = 2L;
         product2.setWeight(WEIGHT2);
 
-        Duplicate duplicate = new Duplicate(GRP, TYPE, List.of(product1, product2));
-        ResultGroupTypeDuplicates resultDuplicates = new ResultGroupTypeDuplicates(List.of(duplicate));
+        Duplicate duplicate = new Duplicate(GRP, TYPE, Arrays.asList(product1, product2));
+        ResultGroupTypeDuplicates resultDuplicates = new ResultGroupTypeDuplicates(Arrays.asList((duplicate)));
 
         ResultMinMaxWeight resultMinMaxWeight = new ResultMinMaxWeight();
         resultMinMaxWeight.setMin(MIN_WEIGHT);

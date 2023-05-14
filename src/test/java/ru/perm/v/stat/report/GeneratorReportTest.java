@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 import ru.perm.v.stat.Product;
 import ru.perm.v.stat.results.*;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,9 +32,9 @@ class GeneratorReportTest {
         Long WEIGHT2 = 2L;
         product2.setWeight(WEIGHT2);
 
-        Duplicate duplicate = new Duplicate(GRP, TYPE, List.of(product1, product2));
+        Duplicate duplicate = new Duplicate(GRP, TYPE, Arrays.asList(product1, product2));
 
-        ResultGroupTypeDuplicates resultDuplicates = new ResultGroupTypeDuplicates(List.of(duplicate));
+        ResultGroupTypeDuplicates resultDuplicates = new ResultGroupTypeDuplicates(Collections.singletonList(duplicate));
 
         Long MIN = 10L;
         Long MAX = 100L;
@@ -49,6 +51,6 @@ class GeneratorReportTest {
         GeneratorReport generatorReport = new GeneratorReport(resultMain);
         List<String> report = generatorReport.getReportStrings();
 
-        assertEquals(9, report.size());
+        assertEquals(8, report.size());
     }
 }

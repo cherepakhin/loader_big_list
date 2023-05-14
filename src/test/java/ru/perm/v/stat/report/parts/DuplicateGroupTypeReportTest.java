@@ -5,6 +5,7 @@ import ru.perm.v.stat.Product;
 import ru.perm.v.stat.results.Duplicate;
 import ru.perm.v.stat.results.ResultGroupTypeDuplicates;
 
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -31,8 +32,8 @@ class DuplicateGroupTypeReportTest {
         Long WEIGHT2 = 2L;
         product2.setWeight(WEIGHT2);
 
-        Duplicate duplicate = new Duplicate(GRP, TYPE, List.of(product1, product2));
-        ResultGroupTypeDuplicates resultDuplicates = new ResultGroupTypeDuplicates(List.of(duplicate));
+        Duplicate duplicate = new Duplicate(GRP, TYPE, Arrays.asList(product1, product2));
+        ResultGroupTypeDuplicates resultDuplicates = new ResultGroupTypeDuplicates(Arrays.asList(duplicate));
 
         DuplicateGroupTypeReport duplicateReport = new DuplicateGroupTypeReport(resultDuplicates);
         List<String> body = duplicateReport.getBody();

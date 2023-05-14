@@ -3,6 +3,8 @@ package ru.perm.v.stat.results;
 import org.junit.jupiter.api.Test;
 import ru.perm.v.stat.Product;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -21,8 +23,9 @@ class ResultDuplicatesTest {
         product2.setGrp(GRP);
         product2.setType(TYPE);
 
-        Duplicate duplicate = new Duplicate(GRP, TYPE, List.of(product1, product2));
-        ResultGroupTypeDuplicates resultDuplicates = new ResultGroupTypeDuplicates(List.of(duplicate));
+        Duplicate duplicate = new Duplicate(GRP, TYPE, Arrays.asList(product1, product2));
+        ResultGroupTypeDuplicates resultDuplicates =
+                new ResultGroupTypeDuplicates(Arrays.asList(duplicate));
 
         // зафиксирован один двойник с 2 товарами с одинаковой группой и типом
         assertEquals(1, resultDuplicates.getDuplicates().size());
